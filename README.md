@@ -5,7 +5,7 @@ I created this pkg for write log to clichouse via https://vector.dev/
 
 ### vector config
 
-```
+```yaml
 sources:
   http_input:
     type: http_server
@@ -40,7 +40,7 @@ sinks:
 ```
 
 clickshouse table
-```
+```sql
 CREATE TABLE logs.logs2
 (
 
@@ -64,7 +64,7 @@ SETTINGS index_granularity = 8192;
 ```
 
 ### clickhouse docker compose
-```
+```yaml
 version: '3.8'
 
 services:
