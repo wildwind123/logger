@@ -105,3 +105,23 @@ services:
 	})
 	logger.Info("test logger", slog.String("test_attr", "test_attr_value"))
 ```
+
+
+#### systemctl config
+```
+[Unit]
+Description=Vector Logger
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/user/projects/logs/vector
+ExecStart=vector --config /home/user/projects/logs/vector/http_log.yaml
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
