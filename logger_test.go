@@ -1,4 +1,4 @@
-package logger
+package slogger
 
 import (
 	"log/slog"
@@ -7,7 +7,7 @@ import (
 )
 
 func TestLogger(t *testing.T) {
-	t.Skip()
+	// t.Skip()
 	logger := NewLogger(&Options{
 		Level:     slog.LevelDebug,
 		AddSource: true,

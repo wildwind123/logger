@@ -6,7 +6,5 @@ github.com/samber/slog-formatter v1.0.1 h1:p7siOGfBrxD/Pdaqg+caRtEp3EfLch1MwHqer
 github.com/samber/slog-formatter v1.0.1/go.mod h1:xJvsffDWM5KxZCucmT9FfX80QfHMr2K92gv/9rO3Sr4=
 github.com/samber/slog-multi v1.1.0 h1:m5wfpXE8Qu2gCiR/JnhFGsLcWDOmTxnso32EMffVAY0=
 github.com/samber/slog-multi v1.1.0/go.mod h1:uLAvHpGqbYgX4FSL0p1ZwoLuveIAJvBECtE07XmYvFo=
-golang.org/x/exp v0.0.0-20240707233637-46b078467d37 h1:uLDX+AfeFCct3a2C7uIWBKMJIR3CJMhcgfrUAqjRK6w=
-golang.org/x/exp v0.0.0-20240707233637-46b078467d37/go.mod h1:M4RDyNAINzryxdtnbRXRL/OHtkFuWGRjvuhBJpk2IlY=
 golang.org/x/text v0.16.0 h1:a94ExnEXNtEwYLGJSIUxnWoxoRz/ZcCsV63ROupILh4=
 golang.org/x/text v0.16.0/go.mod h1:GhwF1Be+LQoKShO3cGOHzqOgRrGaYc9AvblQOmPVHnI=
