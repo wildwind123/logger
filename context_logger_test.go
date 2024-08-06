@@ -13,18 +13,29 @@ func TestCtxLogger(t *testing.T) {
 	logger := FromCtx(ctxWithLogger)
 
 	logger.Info("test logger")
+
 }
 
-func TestRequestIDCtx(t *testing.T) {
+func TestTrackIDCtx(t *testing.T) {
 	ctx := context.Background()
 
-	sampleRequestID := "sample_request_id"
+	sampleTrackID := "sample_track_id"
 
-	ctx = RequestIDToCtx(ctx, sampleRequestID)
+	ctx = TrackIDToCtx(ctx, sampleTrackID)
 
-	requestID := RequestIDFromCtx(ctx)
+	trackID := TrackIDFromCtx(ctx)
 
-	if requestID != sampleRequestID {
+	if trackID != sampleTrackID {
 		t.Error("wrong request id")
 	}
+
+	l := slog.Default()
+
+	l = l.With(AttrTrackID(ctx))
+
+	ctx = ToCtx(ctx, l)
+
+	ctxLogger := FromCtx(ctx)
+
+	ctxLogger.Info("test logger")
 }

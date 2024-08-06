@@ -1,6 +1,7 @@
 package logger
 
 import (
+	"context"
 	"io"
 	"log/slog"
 	"os"
@@ -50,4 +51,14 @@ func NewLogger(options *Options) *slog.Logger {
 	).WithGroup("attrs")
 
 	return logger
+}
+
+func AttrTrackID(ctx context.Context) slog.Attr {
+	trackID := TrackIDFromCtx(ctx)
+	if trackID == "" {
+		// return empty attribute
+		return slog.Attr{}
+	}
+
+	return slog.String("track_id", trackID)
 }
